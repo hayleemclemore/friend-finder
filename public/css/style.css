@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+body {
+  font-family: "Open Sans","Roboto",Arial,sans-serif;
+}
 
 .survey {
   margin: 0;
@@ -18,7 +21,7 @@
   left: 0;
   background: #5977B0;
   width: 100%;
-  height: 340px;
+  height: 100%;
 }
 
 header {
@@ -33,22 +36,20 @@ header {
 }
 
 header h1 {
-  font-family: 'PT Sans', Helvetica, sans-serif;
-  letter-spacing: 0.1em;
-  font-size: 50px;
+  font-size: 48px;
 }
 
 header p {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   letter-spacing: 0.05em;
   font-size: 18px;
   color: hsla(222, 100%, 92%, 1);
-  font-style: italic;
+  font-weight: 100;
 }
 
 header img {
   position: absolute;
-  top: 20px;
+  top: -40px;
   right: 0;
   height: 300px;
   width: auto;
@@ -56,16 +57,17 @@ header img {
   opacity: 0.3;
 }
 
-.main-survey {
+.survey-form-main {
   flex: 1 1 auto;
   min-width: 400px;
   width: calc(80% - 50px);
   max-width: 1000px;
   z-index: 2;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 30px 50px;
   box-shadow: 0 0 10px hsla(222, 10%, 10%, 0.1), 1px 2px 6px hsla(222, 10%, 10%, 0.2);
+  margin-bottom: 60px;
 }
 
 .form-item {
@@ -80,6 +82,11 @@ header img {
   font-family: 'PT Sans', Helvetica, sans-serif;
   color: hsla(222, 100%, 31%, 1);
   font-size: 17px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .form-item label{
@@ -103,10 +110,10 @@ header img {
 .form-item select,
 .form-item textarea {
   border: 2px solid hsla(222, 20%, 85%, 1);
-  border-radius: 4px;
+  border-radius: 25px;
   padding: 0 10px;
   line-height: 35px;
-  height: 35px;
+  height: 45px;
   display: block;
   font-family: 'PT Sans', Helvetica, sans-serif;
   color: hsla(222, 100%, 11%, 1);
@@ -147,16 +154,20 @@ button {
   border: 0 solid transparent;
   height: 35px;
   width: auto;
-  border-radius: 4px;
-  background: hsla(222, 100%, 41%, 1);
+  border-radius: 25px;
+  background: #5977B0;
   box-shadow: 0 1px 3px hsla(0,0%,0%,0.2);
   color: #fff;
-  padding: 0 20px;
+  padding: 10 20px;
   line-height: 35px;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.05em;
   font-family: 'PT Sans', Helvetica, sans-serif;;
+}
+
+#submit {
+  width: 200px;
 }
 
 button:hover {
@@ -173,4 +184,55 @@ footer {
   height: 200px;
   width: 100%;
   background: hsla(222, 80%, 5%, 0.7);
+}
+
+
+/* Styles for Modal */
+
+img#friendMatchPhoto {
+    border: 0;
+    width: 100%;
+    border-radius: 0%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 20px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.close {
+    float: right;
+    font-size: 41px;
+    line-height: 1;
+    color: #5977B0;
+    filter: alpha(opacity=20);
+    box-shadow: none;
+}
+
+button.close:hover {
+  background: none;
+  color: #5977B0;
+}
+
+#friendMatch {
+  font-size: 30px;
+  color: #5977B0;
+  font-weight: 700;
+}
+
+.modal-header {
+  border-bottom:none;
+}
+
+.modal-content {
+  border-radius: 25px;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-body h3, .modal-body h2 {
+  padding-left: 30px;
 }

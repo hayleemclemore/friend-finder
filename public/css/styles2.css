@@ -7,6 +7,11 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
   }
 
+  h2 {
+    text-align: center;
+    font-weight: 300;
+  }
+  
   .phone {
     position: relative;
     display: block;
@@ -109,10 +114,10 @@ margin-top: 30px;
     width: 100%;
     border: 0;
     padding: 15px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     color: #FFFFFF;
     font-size: 14px;
     -webkit-transition: all 0.3 ease;
@@ -123,7 +128,7 @@ margin-top: 30px;
   .form .register-form {
     display: none;
   }
-  
+
 .home-screen-links {
   margin: 100px 0 10px;
 }

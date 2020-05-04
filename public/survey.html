@@ -1,242 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friend Finder</title>
-     <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
+    <!-- Link to Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
     <!-- Link to static CSS -->
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
-</head>
-<body class="survey">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body class="survey">
     <header>
-        <h1 id="title">FriendFinder Survey</h1>
-        <p id="description">
+      <h1 id="title">FriendFinder Survey</h1>
+      <p id="description">
         Rate yourself on a scale 1-5 (1-disagree, 5-strongly agree)
-        </p>
-        <img id="header-img" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/customer_survey_f9ur.svg" alt="Survey logo"/>
-      </header>
+      </p>
+      <img
+        id="header-img"
+        src="./images/survey-graphic@2x.png"
+        alt="Survey logo"
+      />
+    </header>
 
-      <!-- Survey -->
-      <main class="main-survey">
-        <form id="survey-form">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="First Name">
-            <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">I consider myself spontaneous and adventurous.</label>
-            <select id="scores1" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">My goals in life are clear.</label>
-            <select id="scores2" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">If people are rude to me I just shrug it off.</label>
-            <select id="scores3" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">I can work even when things are disorganised.</label>
-            <select id="scores4" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">I enjoy meeting new people.</label>
-            <select id="scores5" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">I dislike being the center of attention.</label>
-            <select id="scores6" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">I warm up quickly to others.</label>
-            <select id="scores7" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">I love to take care of people and I'm good at it.</label>
-            <select id="scores8" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">Personal relationships are by far the most important thing in my life.</label>
-            <select id="scores9" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          <div class='form-item'>
-            <label for="name" id="name-label">Sometimes I have overextended myself in trying to help people.</label>
-            <select id="scores10" class="custom-select custom-select-lg mb-3">
-                <option selected>Select</option>
-                <option value="1">1 - Strongly disagree</option>
-                <option value="2">2 - Somewhat disagree</option>
-                <option value="3">3 - Neither agree nor disagree</option>
-                <option value="4">4 - Somewhat agree</option>
-                <option value="5">5 - Strongly agree</option>
-              </select>
-          </div>
-          
-          
-          <!--button to submit responses -->
-          <button type="submit" id="submit">Submit</button>
-        </form>
-      </main>
+    <!-- Survey -->
+    <main class="survey-form-main">
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            class="form-control"
+            id="name"
+            aria-describedby="nameHelp"
+            placeholder="First Name"
+          />
+          <small id="nameHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="photo">Photo</label>
+          <input
+            id="photo"
+            type="text"
+            class="form-control"
+            placeholder="Link to Profile Photo (Required)"
+          />
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label"
+            >I consider myself spontaneous and adventurous.</label
+          >
+          <select id="scores1" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label">My goals in life are clear.</label>
+          <select id="scores2" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label"
+            >If people are rude to me I just shrug it off.</label
+          >
+          <select id="scores3" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label"
+            >I can work even when things are disorganised.</label
+          >
+          <select id="scores4" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label">I enjoy meeting new people.</label>
+          <select id="scores5" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label"
+            >I dislike being the center of attention.</label
+          >
+          <select id="scores6" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label">I warm up quickly to others.</label>
+          <select id="scores7" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label"
+            >I love to take care of people and I'm good at it.</label
+          >
+          <select id="scores8" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label"
+            >Personal relationships are by far the most important thing in my
+            life.</label
+          >
+          <select id="scores9" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="name" id="name-label"
+            >Sometimes I have overextended myself in trying to help
+            people.</label
+          >
+          <select id="scores10" class="custom-select custom-select-lg mb-3">
+            <option selected>Select</option>
+            <option value="1">1 - Strongly disagree</option>
+            <option value="2">2 - Somewhat disagree</option>
+            <option value="3">3 - Neither agree nor disagree</option>
+            <option value="4">4 - Somewhat agree</option>
+            <option value="5">5 - Strongly agree</option>
+          </select>
+        </div>
 
-      <!--modal after form is submitted -->
-      <div class="modal" id="friendMatchModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3>You were matched with...!</h3>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h2 id="friendMatch"></h2>
-              <img id="friendMatchPhoto" src="#">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+        <!--button to submit responses -->
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+
+    <!--modal after form is submitted -->
+    <div class="modal" id="friendMatchModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
+          <div class="modal-body">
+            <h3>You were matched with...</h3>
+            <h2 id="friendMatch"></h2>
+            <img id="friendMatchPhoto" src="#" />
+          </div>
+          <!-- <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div> -->
         </div>
       </div>
+    </div>
 
-      <script
+    <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
-      $("#submit").on('click', function(e) {
+      $("#submit").on("click", function (e) {
         e.preventDefault();
-        console.log("you got clicked!")
+        console.log("you got clicked!");
 
         //form validation
         var valid = true;
 
-        if(valid) {
+        if ($("#name").val() === "" || $("#photo").val() === "") {
+          valid = false;
+        } else if (
+          $("#scores1").val() === "empty" ||
+          $("#scores2").val() === "empty" ||
+          $("#scores3").val() === "empty" ||
+          $("#scores4").val() === "empty" ||
+          $("#scores5").val() === "empty" ||
+          $("#scores6").val() === "empty" ||
+          $("#scores7").val() === "empty" ||
+          $("#scores8").val() === "empty" ||
+          $("#scores9").val() === "empty" ||
+          $("#scores10").val() === "empty"
+        ) {
+          valid = false;
+        }
 
+        if (valid) {
           var newPerson = {
-          name: $("#name").val().trim(),
-          photo: $("#name").val().trim(),
-          scores: [
-            parseInt($( "#scores1 option:selected" ).val()),
-            parseInt($( "#scores2 option:selected" ).val()),
-            parseInt($( "#scores3 option:selected" ).val()),
-            parseInt($( "#scores4 option:selected" ).val()),
-            parseInt($( "#scores5 option:selected" ).val()),
-            parseInt($( "#scores6 option:selected" ).val()),
-            parseInt($( "#scores7 option:selected" ).val()),
-            parseInt($( "#scores8 option:selected" ).val()),
-            parseInt($( "#scores9 option:selected" ).val()),
-            parseInt($( "#scores10 option:selected" ).val()),
-          ]
+            name: $("#name").val().trim(),
+            photo: $("#name").val().trim(),
+            scores: [
+              parseInt($("#scores1 option:selected").val()),
+              parseInt($("#scores2 option:selected").val()),
+              parseInt($("#scores3 option:selected").val()),
+              parseInt($("#scores4 option:selected").val()),
+              parseInt($("#scores5 option:selected").val()),
+              parseInt($("#scores6 option:selected").val()),
+              parseInt($("#scores7 option:selected").val()),
+              parseInt($("#scores8 option:selected").val()),
+              parseInt($("#scores9 option:selected").val()),
+              parseInt($("#scores10 option:selected").val()),
+            ],
+          };
 
-        };
-        
-      
-        console.log(newPerson);
+          console.log(newPerson);
 
-        // $.ajax({
-        //   url:"/api/friends",
-        //   type: "POST",
-        //   data:newPerson
-        // })
-        // .then(function(response){
-        //   console.log("It worked")
-        //   // show modal !!
-          
-        // })
+          // $.ajax({
+          //   url:"/api/friends",
+          //   type: "POST",
+          //   data:newPerson
+          // })
+          // .then(function(response){
+          //   console.log("It worked")
+          //   // show modal !!
 
-        var currentURL = window.location.origin;
+          // })
 
-// Ajax call for receiving response after POST req
-$.post(currentURL + "/api/friends", newPerson, function(data) {
-  $("#friendMatch").text(data.name);
-  $("#friendMatchPhoto").attr("src", data.photo);
-  $("#friendMatchModal").modal("toggle");
-}); 
+          var currentURL = window.location.origin;
 
-}
-
-else {
-// If a required field is missing, show alert
-alert("Survey is incomplete!");
-}
-
-});
-
-</script>
-
-      
-     
-</body>
+          // Ajax call for receiving response after POST req
+          $.post(currentURL + "/api/friends", newPerson, function (data) {
+            $("#friendMatch").text(data.name);
+            $("#friendMatchPhoto").attr("src", data.photo);
+            $("#friendMatchModal").modal("toggle");
+          });
+        } else {
+          // If a required field is missing, show alert
+          alert("Survey is incomplete!");
+        }
+      });
+    </script>
+  </body>
 </html>
