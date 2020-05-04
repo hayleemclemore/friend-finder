@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+.survey {
+  margin: 0;
+  padding: 0;
+  background: hsla(222, 100%, 98%, 1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.survey:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #5977B0;
+  width: 100%;
+  height: 340px;
+}
+
+header {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 400px;
+  width: 80%;
+  max-width: 1000px;
+  z-index: 2;
+  margin: 50px 0 30px 0;
+  color: #fff;
+}
+
+header h1 {
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 50px;
+}
+
+header p {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 18px;
+  color: hsla(222, 100%, 92%, 1);
+  font-style: italic;
+}
+
+header img {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  height: 300px;
+  width: auto;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.main-survey {
+  flex: 1 1 auto;
+  min-width: 400px;
+  width: calc(80% - 50px);
+  max-width: 1000px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 50px;
+  box-shadow: 0 0 10px hsla(222, 10%, 10%, 0.1), 1px 2px 6px hsla(222, 10%, 10%, 0.2);
+}
+
+.form-item {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 5px 0;
+}
+
+.form-item p {
+  display: block;
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  color: hsla(222, 100%, 31%, 1);
+  font-size: 17px;
+}
+
+.form-item label{
+  display: block;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: hsla(222, 100%, 31%, 1);
+    font-size: 17px;
+    font-weight: 400;
+    margin: 26px 0 10px 0;
+}
+
+.form-item.checkboxes label,
+.form-item.radios label{
+  color: hsla(222, 60%, 21%, 1);
+  font-size: 15px;
+}
+
+.form-item input[type='text'],
+.form-item input[type='email'],
+.form-item input[type='number'],
+.form-item select,
+.form-item textarea {
+  border: 2px solid hsla(222, 20%, 85%, 1);
+  border-radius: 4px;
+  padding: 0 10px;
+  line-height: 35px;
+  height: 35px;
+  display: block;
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  color: hsla(222, 100%, 11%, 1);
+  font-size: 14px;
+  width: calc(100% - 20px);
+  margin: 12px 0;
+  transition: background 0.1s ease-out;
+}
+
+.form-item select {
+  width: 100%;
+}
+
+.form-item textarea {
+  min-height: 100px;
+}
+
+.form-item input[type='text']:hover,
+.form-item input[type='email']:hover,
+.form-item input[type='number']:hover,
+.form-item select:hover,
+.form-item textarea:hover {
+  background: hsla(222, 20%, 98%, 1);
+}
+
+.form-item input[type='text']:focus,
+.form-item input[type='email']:focus,
+.form-item input[type='number']:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+  outline: none;
+  background: hsla(222, 20%, 98%, 1);
+  border: 2px solid hsla(222, 100%, 61%, 1);
+}
+
+button {
+  display: inline-block;
+  border: 0 solid transparent;
+  height: 35px;
+  width: auto;
+  border-radius: 4px;
+  background: hsla(222, 100%, 41%, 1);
+  box-shadow: 0 1px 3px hsla(0,0%,0%,0.2);
+  color: #fff;
+  padding: 0 20px;
+  line-height: 35px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-family: 'PT Sans', Helvetica, sans-serif;;
+}
+
+button:hover {
+  background: hsla(222, 100%, 36%, 1);
+} 
+
+button:active {
+  background: hsla(222, 100%, 45%, 1);
+  box-shadow: 0 0 0 transparent;
+} 
+
+footer {
+  margin: 60px 0 0 0;
+  height: 200px;
+  width: 100%;
+  background: hsla(222, 80%, 5%, 0.7);
+}
