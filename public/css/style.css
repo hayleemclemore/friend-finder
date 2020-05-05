@@ -156,14 +156,20 @@ button {
   width: auto;
   border-radius: 25px;
   background: #5977B0;
-  box-shadow: 0 1px 3px hsla(0,0%,0%,0.2);
+  /* box-shadow: 0 1px 3px hsla(0,0%,0%,0.2); */
   color: #fff;
-  padding: 10 20px;
-  line-height: 35px;
+  padding: 10px 20px;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.05em;
-  font-family: 'PT Sans', Helvetica, sans-serif;;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.btn-light {
+  border-radius: 25px;
+  background: #ffffff;
+  color: #5977B0;
+  padding: 10px 20px;
 }
 
 #submit {

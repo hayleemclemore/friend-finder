@@ -2,13 +2,6 @@
 
 # Friend Finder - Node and Express Servers
 
-### Overview
-
-In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
-
-You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
-
-
 ### Before You Begin
 
 * Check out [this demo version of the site](https://friend-finder-fsf.herokuapp.com/). Use this as a model for how we expect your assignment look and operate.
@@ -68,26 +61,6 @@ Having an active and healthy commit history on GitHub is important for your futu
    * A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
    * A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 
-5. You should save your application's data inside of `app/data/friends.js` as an array of objects. Each of these objects should roughly follow the format below.
-
-```json
-{
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  "scores":[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ]
-}
-```
 
 6. Determine the user's most compatible friend using the following as a guide:
 
@@ -125,24 +98,51 @@ See the [Supplemental Heroku Deployment Guide](../../03-Supplemental/HerokuGuide
 
 - - -
 
-### Create a README.md
 
-Add a `README.md` to your repository describing the project. Here are some resources for creating your `README.md`. Here are some resources to help you along the way:
 
-* [About READMEs](https://help.github.com/articles/about-readmes/)
+### Overview
 
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+"FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
-- - -
+You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
 
-### Add To Your Portfolio
+## Requirements
+- 10-question survey to assess uniqueness of users
+- Separate file for storing friends (`friends.js`)
+- Use `express`, `body-parser`, and `path` npm packages in the `server.js` file
+- Two JavaScript files for routing (`htmlRoutes.js` and `apiRoutes.js`)
+- GET and POST routes for serving HTML pages and API calls
+- Separate files for server logic, storing data, views, and routing
+- Calculate best match for user once survey is completed and return that match to the user.
+- `server.js` file should require the npm packages `express` and `path`
 
-After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
+![Home Desktop View](./public/images/mock-1@2x.png)
+![Survey Desktop View](./public/images/mock-2@2x.png)
 
-- - -
+## Technologies Used
+- JavaScript
+- jQuery
+- node.js
+- Express.js
+- HTML
+- Bootstrap
 
-### One More Thing
 
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
+## Code Explanation
+- Our `server.js` file sets up the Express server, specifying our port number, the npm packages that need to be loaded, and also the routes, which we have externalized
+- There are 2 separate HTML files (`home.html` and `survey.html`) that serve as the front-end portion of our code; they determine what the user sees (the homepage and the survey, which will also show the resulting best match)
+- Our 2 routing files (`htmlRoutes.js` and `apiRoutes.js`) determine the back-end logic (based on the request being made, the response that gets sent to the browser); the HTML routes display the survey and the homepage based on the URL that is accessed, and the API routes send back existing content in our server-side data or add new friends
+- The closest match will be the user with the least amount of difference in scores. The friend will be returned to the browser as a JSON object
+- After the form is submitted, a modal will display the friend match to the user
+- The data for the application is saved in `app/data/friends.js` as an array of objects. The array can be viewed clicking the link on the 'API Friends List' link on the home screen of the application. Each friend is stored as an object in the format below
 
-**Good Luck!**
+```json
+{
+  "name":"Ahmed",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      5,1,4,1,4,5,2,1,3,5
+    ]
+}
+```
+
