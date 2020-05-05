@@ -1,7 +1,9 @@
 # Friend Finder - Node and Express Servers
+
 Looking to make new friends? The "FriendFinder" application is here to help you find your most compatable friend.
 
 ### Overview
+
 This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
 Test the app: [Here](https://my-friend-finder-app-1.herokuapp.com/)
@@ -18,17 +20,17 @@ Test the app: [Here](https://my-friend-finder-app-1.herokuapp.com/)
 - Use `express` to handle routing, `body-parser`, and `path` npm packages in the `server.js` file
 - Two JavaScript files for routing (`htmlRoutes.js` and `apiRoutes.js`)
 - `htmlRoutes.js` file should include two routes:
-   * A GET Route to `/survey` which should display the survey page.
-   * A default, catch-all route that leads to `home.html` which displays the home page.
+  - A GET Route to `/survey` which should display the survey page.
+  - A default, catch-all route that leads to `home.html` which displays the home page.
 - `apiRoutes.js` file should contain two routes:
-   * A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
-   * A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+  - A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
+  - A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 - Separate files for server logic, storing data, views, and routing
 - Calculate best match for user once survey is completed and return that match to the user.
 - `server.js` file should require the npm packages `express` and `path`
 
-
 ## Technologies Used
+
 - JavaScript
 - jQuery
 - node.js
@@ -36,8 +38,8 @@ Test the app: [Here](https://my-friend-finder-app-1.herokuapp.com/)
 - HTML
 - Bootstrap
 
+## Detailed Explanation
 
-## Code Explanation
 - The `server.js` file sets up the Express server (port number,npm packages, and routes.
 - Front-End: the user sees the homepage and the survey(`home.html` and `survey.html`)
 - The HTML routes specify the back-end logic and return a response to the browser, once a request has been made. Depending on the URL that is accessed, they display the survey and the homepage. The API routes are set to either add a new friend to the friend list, or send back existing content.
@@ -46,11 +48,10 @@ Test the app: [Here](https://my-friend-finder-app-1.herokuapp.com/)
 
 ```json
 {
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  "scores":[
-      5,1,4,1,4,5,2,1,3,5
-    ]
+  "name": "Ahmed",
+  "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores": [5, 1, 4, 1, 4, 5, 2, 1, 3, 5]
 }
 ```
+
 - The closest match will be the user with the least amount of difference in scores. The friend will be returned to the browser
