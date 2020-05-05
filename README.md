@@ -6,8 +6,8 @@ This full-stack site will take in results from your users' surveys, then compare
 
 Test the app: [Here](https://my-friend-finder-app-1.herokuapp.com/)
 
-![Home Desktop View](./app/public/images/mock-1@2x.png)
-![Survey Desktop View](./app/public/images/mock-2@2x.png)
+![Home Desktop View](./app/public/assets/images/mock-1@2x.png)
+![Survey Desktop View](./app/public/assets/images/mock-2@2x.png)
 
 ## Requirements
 
