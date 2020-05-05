@@ -213,15 +213,6 @@
             <h2 id="friendMatch"></h2>
             <img id="friendMatchPhoto" src="#" />
           </div>
-          <!-- <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div> -->
         </div>
       </div>
     </div>
@@ -278,17 +269,6 @@
 
           console.log(newPerson);
 
-          // $.ajax({
-          //   url:"/api/friends",
-          //   type: "POST",
-          //   data:newPerson
-          // })
-          // .then(function(response){
-          //   console.log("It worked")
-          //   // show modal !!
-
-          // })
-
           var currentURL = window.location.origin;
 
           // Ajax call for receiving response after POST req
@@ -296,6 +276,18 @@
             $("#friendMatch").text(data.name);
             $("#friendMatchPhoto").attr("src", data.photo);
             $("#friendMatchModal").modal("toggle");
+            $("#name").val("");
+            $("#photo").val("");
+            $("#scores1").val("");
+            $("#scores2").val("");
+            $("#scores3").val("");
+            $("#scores4").val("");
+            $("#scores5").val("");
+            $("#scores6").val("");
+            $("#scores7").val("");
+            $("#scores8").val("");
+            $("#scores9").val("");
+            $("#scores10").val("");
           });
         } else {
           // If a required field is missing, show alert
